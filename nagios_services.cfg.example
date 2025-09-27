@@ -1,0 +1,136 @@
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit CPU
+    check_command           check_wr_cpu
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit OS
+    check_command           check_wr_os
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Main
+    check_command           check_wr_main
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Timing
+    check_command           check_wr_timing
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Network
+    check_command           check_wr_net
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Temperature
+    check_command           check_wr_temp
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Memory
+    check_command           check_wr_mem
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Disk
+    check_command           check_wr_disk
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit PTP
+    check_command           check_wr_ptp
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit PLL
+    check_command           check_wr_pll
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Slave
+    check_command           check_wr_slave
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit PTP Frames
+    check_command           check_wr_ptpframes
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit System Clock
+    check_command           check_wr_systemclock
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit SFP
+    check_command           check_wr_sfp
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Endpoint
+    check_command           check_wr_endpoint
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit Soft Core
+    check_command           check_wr_swcore
+    servicegroups           White Rabbit
+}
+
+define service {
+    use                     generic-service
+    hostgroup_name          White Rabbit
+    service_description     Check White Rabbit RTU
+    check_command           check_wr_rtu
+    servicegroups           White Rabbit
+}
+

@@ -1,0 +1,85 @@
+define command {
+    command_name    check_wr_cpu
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m cpu
+}
+
+define command {
+    command_name    check_wr_os
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m os
+}
+
+define command {
+    command_name    check_wr_main
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m main
+}
+
+define command {
+    command_name    check_wr_timing
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m timing
+}
+
+define command {
+    command_name    check_wr_net
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m net
+}
+
+define command {
+    command_name    check_wr_temp
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m temp
+}
+
+define command {
+    command_name    check_wr_mem
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m mem
+}
+
+define command {
+    command_name    check_wr_disk
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m disk
+}
+
+define command {
+    command_name    check_wr_ptp
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m ptp
+}
+
+define command {
+    command_name    check_wr_pll
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m pll
+}
+
+define command {
+    command_name    check_wr_slave
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m slave
+}
+
+define command {
+    command_name    check_wr_ptpframes
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m ptpframes
+}
+
+define command {
+    command_name    check_wr_systemclock
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m systemclock
+}
+
+define command {
+    command_name    check_wr_sfp
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m sfp
+}
+
+define command {
+    command_name    check_wr_endpoint
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m endpoint
+}
+
+define command {
+    command_name    check_wr_swcore
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m swcore
+}
+
+define command {
+    command_name    check_wr_rtu
+    command_line    $USER1$/local/check_white_rabbit -H $HOSTADDRESS$ -C public -m rtu
+}
+
