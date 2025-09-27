@@ -323,6 +323,16 @@ define service {
 
 ---
 
+## Contributing
+
+Contributions are welcome! 🎉  
+
+- Found a bug? Open an [issue](https://github.com/pb1dft/check_white_rabbit/issues).  
+- Have an improvement? Submit a pull request.  
+- Want to add new checks? Fork the repo and share your work.  
+
+---
+
 ## License
 
 This plugin is released under the **GNU GPL v2**, the same license as Nagios plugins.  
