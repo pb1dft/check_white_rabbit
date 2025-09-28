@@ -99,11 +99,13 @@ To run the tests:
 
 ```bash
 pytest -v 
+```
 
 Or have more debug:
 
 ```bash
 pytest -v -s
+```
 
 ## Nagios Integration
 
