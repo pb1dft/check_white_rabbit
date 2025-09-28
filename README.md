@@ -86,6 +86,25 @@ Nagios/Icinga exit codes are used:
 
 ---
 
+## Running Tests
+
+This project includes a pytest test suite to validate the behavior of the
+`check_white_rabbit` Nagios plugin without requiring a live White Rabbit switch.
+
+The tests use `monkeypatch` to replace SNMP calls (`snmp_get` / `snmp_walk`) with
+mock values, allowing simulation of different device states (OK, WARNING,
+CRITICAL, UNKNOWN).
+
+To run the tests:
+
+```bash
+pytest -v 
+
+Or have more debug:
+
+```bash
+pytest -v -s
+
 ## Nagios Integration
 
 ### Commands

@@ -37,6 +37,7 @@ def test_cpu_ok(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "cpu"])
     assert code == 0
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "CPU Load" in out
 
 
@@ -53,6 +54,7 @@ def test_mem_warning(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "mem"])
     assert code == 1
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "Memory" in out
 
 
@@ -72,6 +74,7 @@ def test_disk_ok(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "disk"])
     assert code == 0
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "Disk" in out
 
 @pytest.mark.parametrize("mode,oid,val,expected_code,expected_msg", [
@@ -91,6 +94,7 @@ def test_generic_status(monkeypatch, capsys, mode, oid, val, expected_code, expe
         wr.main()  # no arguments
 
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert e.value.code == expected_code
     assert expected_msg in out
     assert mode.upper() in out
@@ -116,6 +120,7 @@ def test_ptp_ok(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "ptp"])
     assert code == 0
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "Servo" in out
 
 def test_ptpframes_ok(monkeypatch, capsys):
@@ -125,6 +130,7 @@ def test_ptpframes_ok(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "ptpframes"])
     assert code == 0
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "PTP" in out
 
 
@@ -151,6 +157,7 @@ def test_sfp_with_problem(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "sfp"])
     assert code == 2
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "No detailed problems found" in out
 
 
@@ -166,6 +173,7 @@ def test_new_checks(monkeypatch, capsys, mode, oid):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", mode])
     assert code == 0
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert mode in out.lower() or "soft core" in out.lower()
 
 
@@ -176,6 +184,7 @@ def test_slave_ok(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "slave"])
     assert code == 0
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "slave" in out.lower()
 
 
@@ -186,6 +195,7 @@ def test_systemclock_warning(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "systemclock"])
     assert code == 1
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "system" in out.lower()
 
 
@@ -196,5 +206,6 @@ def test_pll_error(monkeypatch, capsys):
     code = run_with_args(monkeypatch, ["-H", "127.0.0.1", "-m", "pll"])
     assert code == 2
     out = capsys.readouterr().out
+    print(f"\n{out}")
     assert "pll" in out.lower()
 
